@@ -5,9 +5,14 @@ import Pagination from "@/ui/invoices/pagination";
 import Table from "@/ui/invoices/table";
 import Search from "@/ui/search";
 import { InvoicesTableSkeleton } from "@/ui/skeletons";
+import { Metadata } from "next";
 import { Suspense } from "react";
 
-export default async function Page({
+export const metadata: Metadata = {
+  title: "Invoices",
+};
+
+export default async function InvoicesPage({
   searchParams,
 }: {
   searchParams?: {
